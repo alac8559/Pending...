@@ -1,0 +1,18 @@
+1. Planned how website should look on the front end
+	- Training/Home page (Python, JavaScript) - Ask Yash which to code in
+	- Settings (HTML)
+		- What settings do people want to use, what to track
+	- Stats
+	- Chat (Morse-only)
+	- Converter (HTML) (Database-SQL)
+	- About (HTML)
+	- Accounts/Registering (Database-SQL) (Maybe a class)
+		- E-mails
+		- Password
+		- Settings (dict)
+		- Stats
+2. Talked about how trainer will work
+3. Start working on About page
+4. Psuedocode the trainer program over next week or two
+5. Learn how link database to JavaScript
+6. Start layout for registering, about, do the psuedocode
