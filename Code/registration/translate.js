@@ -13,4 +13,5 @@ function translateMe(){
   document.getElementById("signTrans").innerHTML = "Submit";
   document.getElementById("hyperLinkTrans").innerHTML = "Login here";
   alert("Soon enough you will understand what that gibberish was with the help of BeepBoop!");
+  $("#transButton").remove();
 }
