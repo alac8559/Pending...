@@ -6,9 +6,6 @@ function translateMe(){
   document.getElementById("emailTrans").innerHTML = "Email Address";
   document.getElementById("emailAddress").placeholder = "Enter Email";
   document.getElementById("passTrans").innerHTML = "Password";
-  document.getElementById("passwordFirst").placeholder = "Password";
-  document.getElementById("passConfirmTrans").innerHTML = "Confirm Password";
-  document.getElementById("passwordConfirm").placeholder = "Confirm Password";
   document.getElementById("submitTrans").innerHTML = "Already have an account? ";
   document.getElementById("signTrans").innerHTML = "Submit";
   document.getElementById("hyperLinkTrans").innerHTML = "Login here";
