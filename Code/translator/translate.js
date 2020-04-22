@@ -38,10 +38,11 @@ charCodes["8"]="_ _ _ . .";
 charCodes["9"]="_ _ _ _ .";
 charCodes["0"]="_ _ _ _ _";
 
-function l2c(){
+function l2c(string){
 
 
-    this.sentence = document.getElementById("l").value;
+    // this.sentence = document.getElementById("l").value;
+    this.sentence = string;
 
     for(var i = 0; i < this.sentence.length; i++)
     {
@@ -63,7 +64,8 @@ function l2c(){
 
     code = sentence;
     trans(sentence);
-    document.getElementById("code").innerHTML = trans(sentence);
+    // document.getElementById("code").innerHTML = trans(sentence);
+    return(trans(sentence));
 }
 
 
@@ -107,8 +109,10 @@ function CreateAudioContext(freq)
 
 }
 
-function c2a()
+function c2a(string)
 {
+
+    this.code=l2c(string);
 
     CreateAudioContext(750);
     var dur = 0.07;
@@ -149,4 +153,3 @@ function gbeep(Dur,time)
 
 
 }
-
