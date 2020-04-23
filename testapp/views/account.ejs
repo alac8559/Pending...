@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Account</title>
+                <!-- Latest compiled and minified CSS -->
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+              <!-- jQuery library -->
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+              <!-- Popper JS -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+              <!-- Latest compiled JavaScript -->
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+              <style>
+              #nav
+              	{
+              	}
+
+              		#nav-wrapper
+              		{
+              			background: rgb(0,0,0);
+              			position: absolute;
+              			top: 0;
+              			left: 0;
+              			width: 100%;
+              		}
+
+              		#nav > ul
+              		{
+              			margin: 0;
+              			padding: 0;
+              			text-align: center;
+              		}
+
+              		#nav > ul > li
+              		{
+              			display: inline-block;
+              			border-right: 1px solid;
+              			border-color: rgba(255,255,255,.1);
+              		}
+
+              			#nav > ul > li:last-child
+              			{
+              				padding-right: 0;
+              				border-right: none;
+              			}
+
+              			#nav > ul > li > a,
+              			#nav > ul > li > span
+              			{
+              				display: inline-block;
+              				padding: 1.5em 1.5em;
+              				letter-spacing: 0.06em;
+              				text-decoration: none;
+              				text-transform: uppercase;
+              				font-size: 1.1em;
+              				outline: 0;
+              				color: #FFF;
+              			}
+
+              			#nav li.active a
+              			{
+              				color: #FFF;
+              			}
+
+              			#nav > ul > li > ul
+              			{
+              				display: none;
+              			}
+
+              	#header
+                	{
+                		position: relative;
+                		background: url(../images/header.jpg) no-repeat bottom center;
+                		background-attachment: fixed;
+                		background-size: cover;
+                		text-align: center;
+                	}
+
+                		#header:before
+                		{
+                			content: '';
+                			position: absolute;
+                			left: 0;
+                			top: 0;
+                			width: 100%;
+                			height: 100%;
+                			background: rgba(64,64,64,0.125);
+                		}
+
+                		#main
+                        	{
+                        		position: relative;
+                        		background: #fff;
+                        	}
+
+                        	.homepage #content
+                        	{
+                        		text-align: center;
+                        	}
+
+                        	.homepage #content header h2
+                        	{
+                        	}
+
+                        	#sidebar h2
+                        	{
+                        		display: block;
+                        		padding-bottom: 0.50em;
+                        	}
+
+                        	body, html {
+                                      height: 100%;
+                                      margin: 0;
+                                      font-family: Didot, Helvetica, sans-serif;
+                                    }
+
+                                    * {
+                                      box-sizing: border-box;
+                                    }
+                                    .bg-image{
+                                      background-image: url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+
+                                      /* Add the blur effect */
+                                      filter: blur(3px);
+                                      -webkit-filter: blur(3px);
+
+                                      /* Full height */
+                                      height: 100%;
+
+                                      /* Center and scale the image nicely */
+                                      /* background-position: center;
+                                      background-repeat: no-repeat;
+                                      background-size: cover; */
+                                    }
+
+
+                            .bg-text {
+                                      background-color: rgb(0,0,0); /* Fallback color */
+                                      /* background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+                                      background-image: linear-gradient(to bottom right, #434343  , #000000);
+                                      /* color: rgb(245, 245,220); */
+                                      border: 1px solid black;
+                                      color: white;
+                                      font-weight: bold;
+                                      position: absolute;
+                                      top: 50%;
+                                      left: 50%;
+                                      transform: translate(-50%, -50%);
+                                      z-index: 2;
+                                      width: 50%;
+                                      height: 50%;
+                                      padding: 20px;
+                                      text-align: center;
+                                    }
+                                    .bg-tweet {
+                                                                          background-color: rgb(0,0,0); /* Fallback color */
+                                                                          /* background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+                                                                          background-image: linear-gradient(to bottom right, #434343  , #000000);
+                                                                          /* color: rgb(245, 245,220); */
+                                                                          border: 1px solid black;
+                                                                          color: white;
+                                                                          font-weight: bold;
+                                                                          position: absolute;
+                                                                          top: 100%;
+                                                                          left: 50%;
+                                                                          transform: translate(-50%, -50%);
+                                                                          z-index: 2;
+                                                                          width: 1001%;
+                                                                          height: 10%;
+                                                                          padding: 20px;
+                                                                          text-align: center;
+                                                                        }
+
+                                                        .bg-header {
+                                                                                              background-color: rgb(0,0,0); /* Fallback color */
+                                                                                              /* background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+                                                                                              background-image: linear-gradient(to bottom right, #434343  , #000000);
+                                                                                              /* color: rgb(245, 245,220); */
+                                                                                              border: 1px solid black;
+                                                                                              color: white;
+                                                                                              font-weight: bold;
+                                                                                              position: absolute;
+                                                                                              top: 4%;
+                                                                                              left: 50%;
+                                                                                              transform: translate(-50%, -50%);
+                                                                                              z-index: 2;
+                                                                                              width: 101%;
+                                                                                              height: 10%;
+                                                                                              padding: 20px;
+                                                                                              text-align: center;
+                                                                                            }
+
+
+
+              </style>
+        </head>
+
+
+        <body id="homepage">
+
+        <div class="bg-header">
+            <div id="nav-wrapper">
+                <nav id="nav">
+                        <ul>
+                            <li><a href="/home">Home</a></li>
+                            <li ><a href="/tutorial">Tutorial</a></li>
+                            <li><a href="/training">Training</a></li>
+                            <li ><a href="/translate">Translator</a></li>
+                            <li class="active"><a href="#">Account</a></li>
+                            <form action="/logout?_method=DELETE" method="POST"><button type="submit">Log out</button></form>
+                        </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="bg-image"></div>
+
+        <div class="bg-text">
+            <div class="container">
+                <h1>Account Information For - <%= name %></h1>
+                <div class="form-group row">
+                        <label class="col-sm"> Email: <%= email %></label>
+                 </div>
+
+                 <div class="form-group row">
+                         <label class="col-sm"> Password: <%= password %></label>
+                  </div>
+            </div>
+         </div>
+
+         <!-- Tweet -->
+         <div class="bg-tweet">
+             <div id="nav-wrapper">
+                 <section>
+                     <blockquote>.... . .-.. .-.. --- / .-- --- .-. .-.. -.. / -.-.--</blockquote>
+                     <br>
+                     Design: <a href="https://ztwhhh.github.io">Tianwei Zhao</a> Images: <a href="http://unsplash.com">Unsplash</a>
+                 </section>
+             </div>
+         </div>
+        </body>
+    </html>
+
+
+

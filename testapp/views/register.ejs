@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <title>.-. . --. .. ... - . .-.</title>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+      <script>
+      function translateMe(){
+        document.title = "Registration";
+        document.getElementById("titleH1").innerHTML = "Create Account";
+        document.getElementById("fullNameTrans").innerHTML = "Full Name";
+        document.getElementById("fullName").placeholder = "Enter Name";
+        document.getElementById("emailTrans").innerHTML = "Email Address";
+        document.getElementById("emailAddress").placeholder = "Enter Email";
+        document.getElementById("passTrans").innerHTML = "Password";
+        document.getElementById("passwordFirst").placeholder = "Password";
+        document.getElementById("submitTrans").innerHTML = "Already have an account? ";
+        document.getElementById("signTrans").innerHTML = "Submit";
+        document.getElementById("hyperLinkTrans").innerHTML = "Login here";
+        alert("Soon enough you will understand what that gibberish was with the help of BeepBoop!");
+        $("#transButton").remove();
+      }
+      </script>
+
+      <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: Didot, Helvetica, sans-serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+        .bg-image{
+          background-image: url("https://us.123rf.com/450wm/creatorsclub/creatorsclub1607/creatorsclub160700184/60526548-seamless-black-and-white-morse-code-dashed-horizontal-lines-pattern-abstract-background.jpg?ver=6");
+
+          /* Add the blur effect */
+          filter: blur(3px);
+          -webkit-filter: blur(3px);
+
+          /* Full height */
+          height: 100%;
+
+          /* Center and scale the image nicely */
+          /* background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover; */
+        }
+        /* Position text in the middle of the page/image */
+        .bg-text {
+          background-color: rgb(0,0,0); /* Fallback color */
+          /* background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+          background-image: linear-gradient(to bottom right, #434343  , #000000);
+          /* color: rgb(245, 245,220); */
+          border: 1px solid black;
+          color: white;
+          font-weight: bold;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 50%;
+          height: 84%;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .transbut{
+            background-image: linear-gradient(to bottom right, #434343  , #000000);
+            color:white;
+        }
+      </style>
+    </head>
+    <body>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+    <h1 id="titleH1" style="font-weight: bold;">-.-. .-. . .- - . / .- -.-. -.-. --- ..- -. -</h1>
+    <button id="transButton" onclick="translateMe()" class="transbut" >Translate Me</button>
+    <br><br>
+    <form action="/register" method="POST">
+      <div class="form-group row">
+				<label class="col-sm-4" class="col-sm-2 col-form-label" id="fullNameTrans" for="fullName">..-. ..- .-.. .-.. / -. .- -- .</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" name="fullName" id="fullName" placeholder=". -. - . .-. / -. .- -- ." required>
+				</div>
+      </div>
+      <div class="form-group row">
+				<label class="col-sm-4" class="col-sm-2 col-form-label" id="emailTrans" for="emailAddress">. -- .- .. .-.. / .- -.. -.. .-. . ... ...</label>
+				<div class="col-sm-8">
+					<input type="email" class="form-control" name="emailAddress" id="emailAddress"  placeholder=". -- .- .. .-.. / .- -.. -.. .-. . ... ..." required>
+				</div>
+      </div>
+      <div class="form-group row">
+				<label class="col-sm-4" class="col-sm-2 col-form-label" id="passTrans" for="passwordFirst">.--. .- ... ... .-- --- .-. -..</label>
+				<div class="col-sm-8">
+					<input type="password" class="form-control" name="passwordFirst" id="passwordFirst" placeholder=".--. .- ... ... .-- --- .-. -.." required>
+				</div>
+      </div>
+      <button id="signTrans" type="submit" class="signupbtn" style="background: #8DB6CD;">... .. --. -. / ..- .--.</button>
+      <br>
+      <br>
+      <div class="form-group row">
+				<label id="submitTrans" class="col-sm-9" class="col-sm-2 col-form-label" for="login">.- .-.. .-. . .- -.. -.-- / .... .- ...- . / .- -. / .- -.-. -.-. --- ..- -. - ..--..</label>
+				<div class="col-sm-3">
+					<a id="hyperLinkTrans" href="/login">.-.. --- --. .. -. / .... . .-. .</a>
+				</div>
+      </div>
+    </div>
+    </form>
+    </body>
+    </html>
