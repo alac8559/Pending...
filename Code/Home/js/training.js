@@ -106,9 +106,9 @@ function runTraining() {
   addLessonButtons();
   target.innerHTML += "Press to hear the new characters.";
 	var input = "<p>When ready, press play to begin this training session.</p>" +
-            "<input type='button' onclick='c2a(text)' value='Play'>" +
+            "<input type='button' style='margin-bottom:5px' onclick='c2a(text)' value='Play'>" +
             "<input type='text' style='margin-left:auto;margin-right:auto;width:300px' class='form-control' id='les-inp'><br>"  +
-            "<input type='button' onclick='checkInput()' value='Submit'><br>";
+            "<input type='button' style='margin-bottom:10px' onclick='checkInput()' value='Submit'><br>";
   target.innerHTML += input;
 	// target.insertAdjacentHTML("afterend", input);
 }
@@ -188,11 +188,11 @@ function runResults(iWrong) {
     	if(parseInt(accText) >= 90){
           currentLesson++;
     	    target.innerHTML += "<p style='margin-left:auto;margin-right:auto'>Congrats, you've completed this lesson!</p>"
-    	    target.innerHTML += "<button type='button' onclick='reloadLesson()' value='Next Lesson'>Begin Lesson "+ currentLesson +"?</button>"
+    	    target.innerHTML += "<button type='button' style='margin-bottom:10px' onclick='reloadLesson()' value='Next Lesson'>Begin Lesson "+ currentLesson +"?</button>"
     	}
     	else{
     	    target.innerHTML += "<p style='margin-left:auto;margin-right:auto'>We recommend that you retry this lesson until you reach 90% or higher accuracy.</p>"
-    	    target.innerHTML += "<button type='button' onclick='reloadLesson()' value='Retry Lesson  "+ currentLesson +"?'>Retry Lesson</button>"
+    	    target.innerHTML += "<button type='button' style='margin-bottom:10px' onclick='reloadLesson()' value='Retry Lesson  "+ currentLesson +"?'>Retry Lesson</button>"
     	}
 
     }
@@ -212,6 +212,6 @@ function resetButton() {
     document.getElementById('train-target').innerHTML = "<div class='container' style='width:450px;text-align:center' id='buttonContainer'></div>"
   }
   if (document.getElementById("button-begin") == null) {
-    document.getElementById('buttonContainer').innerHTML = "<button id='button-begin' type='button' class='btn btn-primary' onclick='beginLesson()'>Begin lesson!</button>";
+    document.getElementById('buttonContainer').innerHTML = "<button id='button-begin' style='margin-bottom:10px' type='button' class='btn btn-primary' onclick='beginLesson()'>Begin lesson!</button>";
   }
 }
