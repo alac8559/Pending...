@@ -1,9 +1,8 @@
 var began = false;
 var text = "";
 var lessonOrder = new Array(36);
-console.log(document.getElementById("practiceLength"));
-var practiceLength = document.getElementById("practiceLength").value;
-var currentLesson = document.getElementById("currentLesson").value;
+var practiceLength = 2;
+var currentLesson = 1;
 
 lessonOrder[1]="K & M";
 lessonOrder[2]="U";
