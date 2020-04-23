@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <head>
-<script src="./translate.js"></script>
+<script src="./L2C.js"></script>
+<script src="./C2L.js"></script>
 </head>
 
-
+<body onload="send()">
 <input type="text" class="form-control" id="l" placeholder="word">
 <button type="button" class="btn btn-primary" onclick="l2c()">translate</button>
 <div id ="code"> RESULT </div>
 <button type="button" class="btn btn-primary" onclick="c2a()">beep</button>
+<button type="button" class="btn btn-primary" onmousedown="Down()" onmouseup="Up()" >send</button>
+<div id ="tut_code"> RESULT </div>
 </html>
+</body>
