@@ -88,12 +88,6 @@ function runResults(iWrong) {
 
 }
 
-function colorUserSolution(oldValue, iWrong) {
-
-
-  return inpSol
-}
-
 function checkInput() {
   var input = document.getElementById('tut-inp').value.toUpperCase();
   test = this.text.toUpperCase();
