@@ -43,19 +43,26 @@ lessonOrder[35]="X";
 function setPracticeLength(length){
     practiceLength = length.value;
     generateLessonString();
+    if (began) {
+      reloadLesson();
+    }
 }
 
 function setCurrentLesson(lesson){
     currentLesson = document.getElementById(lesson).value;
     console.log(currentLesson);
+    resetButton();
 }
 
 function beginLesson() {
+  if (began) {
+    reloadLesson();
+  }
   // var buttonSave = document.getElementById('buttonContainer').innerHTML;
+  began=true;
   document.getElementById('buttonContainer').innerHTML = "";
   this.text = "";
-  addLessonButtons();
-  console.log("Buttons Added");
+
   generateLessonString(practiceLength);
   console.log("String generated:", text);
   runTraining();
@@ -63,14 +70,14 @@ function beginLesson() {
   }
 
 function addLessonButtons(){
-  if(!began){
-  	document.getElementById("train-title").innerHTML = "Lesson " + currentLesson + ": " + lessonOrder[currentLesson];
+  document.getElementById("train-title").innerHTML = "Lesson " + currentLesson + ": " + lessonOrder[currentLesson];
   	if(currentLesson == 1){
-	    document.getElementById("buttonContainer").insertAdjacentHTML("afterend", "</br><button type='button' class='btn btn-primary' style='margin:20px;text-align:center;' onclick='c2a(\"K\")'>K</button><button type='button' class='btn btn-primary' margin='margin:20px;text-align:center;' onclick='c2a(\"M\")'>M</button>");
+      document.getElementById('train-target').innerHTML += "</br><button type='button' class='btn btn-primary' style='margin:20px;text-align:center;' onclick='c2a(\"K\")'>K</button><button type='button' class='btn btn-primary' margin='margin:20px;text-align:center;' onclick='c2a(\"M\")'>M</button>"
+	    // document.getElementById("buttonContainer").insertAdjacentHTML("afterend", "</br><button type='button' class='btn btn-primary' style='margin:20px;text-align:center;' onclick='c2a(\"K\")'>K</button><button type='button' class='btn btn-primary' margin='margin:20px;text-align:center;' onclick='c2a(\"M\")'>M</button>");
   	} else {
-	    document.getElementById("buttonContainer").insertAdjacentHTML("afterend", "</br><button type='button' class='btn btn-primary' style='margin:20px;text-align:center;' onclick='c2a(" +" \"" + lessonOrder[currentLesson] +"\"" +  ")'>" + lessonOrder[currentLesson] + "</button>");
+      document.getElementById('train-target').innerHTML += "</br><button type='button' class='btn btn-primary' style='margin:20px;text-align:center;' onclick='c2a(" +" \"" + lessonOrder[currentLesson] +"\"" +  ")'>" + lessonOrder[currentLesson] + "</button>"
+	    // document.getElementById("buttonContainer").insertAdjacentHTML("afterend", "</br><button type='button' class='btn btn-primary' style='margin:20px;text-align:center;' onclick='c2a(" +" \"" + lessonOrder[currentLesson] +"\"" +  ")'>" + lessonOrder[currentLesson] + "</button>");
     }
-  }
 }
 
 function generateLessonString(){
@@ -95,13 +102,14 @@ function generateLessonString(){
 function runTraining() {
 
 	var target = document.getElementById('train-target');
+  target.innerHTML = null;
+  addLessonButtons();
   target.innerHTML += "Press to hear the new characters.";
 	var input = "<p>When ready, press play to begin this training session.</p>" +
             "<input type='button' onclick='c2a(text)' value='Play'>" +
             "<input type='text' style='margin-left:auto;margin-right:auto;width:300px' class='form-control' id='les-inp'><br>"  +
-            "<input type='button' onclick='checkInput()' value='Submit'>";
+            "<input type='button' onclick='checkInput()' value='Submit'><br>";
   target.innerHTML += input;
-  began = true;
 	// target.insertAdjacentHTML("afterend", input);
 }
 
@@ -193,7 +201,17 @@ function runResults(iWrong) {
 }
 
 function reloadLesson() {
-  document.getElementById('train-target').innerHTML = "<div class='container' style='width:450px;text-align:center' id='buttonContainer'>" +
-                                                      "<button id='button-begin' type='button' class='btn btn-primary' onclick='beginLesson()'>Begin lesson!</button></div>";
+  document.getElementById('train-target').innerHTML = null;
+  resetButton();
+  began = false;
   beginLesson();
+}
+
+function resetButton() {
+  if (document.getElementById('buttonContainer') == null) {
+    document.getElementById('train-target').innerHTML = "<div class='container' style='width:450px;text-align:center' id='buttonContainer'></div>"
+  }
+  if (document.getElementById("button-begin") == null) {
+    document.getElementById('buttonContainer').innerHTML = "<button id='button-begin' type='button' class='btn btn-primary' onclick='beginLesson()'>Begin lesson!</button>";
+  }
 }
