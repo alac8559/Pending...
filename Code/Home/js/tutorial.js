@@ -1,22 +1,14 @@
 
 var began=false;
-var text = "Welcome to the Beepboop Tutorial";
+var text = "Welcome";
 
 $(document).ready(function() {
   var target = document.getElementById('tutorial-start');
-  // this.text = "Welcome to the Beepboop Tutorial"
   document.getElementById('tutorial-start-header').innerHTML+='<div id="code">'+l2c(text)+'</div>';
-
-  // target.innerHTML += '<h1>'+welc+'</h2><div id="code">'+l2c(welc)+'</div>';
-
-
-
-
-
 });
 
 
-function runTutorialA() {
+function runTutorial() {
   if (began) {
     alert("Tutorial already in progress");
   } else {
@@ -35,7 +27,7 @@ function runTutorialA() {
   }
 }
 
-function runTutorialB(iWrong) {
+function runResults(iWrong) {
   if (began) {
     var target = document.getElementById('tut-target');
     var oldValue = document.getElementById('tut-inp').value.toUpperCase();
@@ -113,6 +105,6 @@ function checkInput() {
     }
   }
 
-  runTutorialB(iWrong);
+  runResults(iWrong);
   // return iWrong;  //returns an array of indexes for letters that were incorrect.
 }
