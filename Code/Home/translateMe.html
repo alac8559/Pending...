@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <script src="./translateFortrans.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Translator</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-desktop.css" />
+    </noscript>
+
+    <style>
+        /* Position text in the middle of the page/image */
+        .bg-text {
+          background-color: rgb(0,0,0); /* Fallback color */
+          /* background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+          background-image: linear-gradient(to bottom right, #434343  , #000000);
+          /* color: rgb(245, 245,220); */
+          border: 1px solid black;
+          color: white;
+          font-weight: bold;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 101%;
+          height: 100%;
+          padding: 20px;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body class="homepage" >
+    <div id="header">
+        <div id="nav-wrapper">
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li class="active">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/tutorial">Tutorial</a></li>
+                    <li><a href="/training">Training</a></li>
+                    <li class="active"><a href="#">Translator</a></li>
+                    <li><a href="/account">Account</a></li>
+                    <form action="/logout?_method=DELETE" method="POST"><button type="submit">Log out</button></form>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container">
+
+            <!-- Logo -->
+            <div id="logo">
+
+                <div class="image full" ><img src="images/translator.JPG" alt=""></div>
+                <h1><a href="#">Translator</a></h1>
+                <span class="tag">Stuck on a lesson? Use the translator for help! </span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="content" class="bg-text">
+            <div class="container">
+                <input type="text" class="form-control" id="l" placeholder="word">
+                <button type="button" class="btn btn-primary" onclick="l2c()">Translate</button>
+                <div id ="code" style="color:red;"> RESULT </div>
+                <button type="button" class="btn btn-primary" onclick="c2a()">beep</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tweet -->
+    <div id="tweet">
+        <div class="container">
+            <section>
+                <blockquote>.... . .-.. .-.. --- / .-- --- .-. .-.. -.. / -.-.--</blockquote>
+            </section>
+        </div>
+    </div>
+
+
+    <div id="copyright">
+        <div class="container">
+            Design: <a href="https://ztwhhh.github.io">Tianwei Zhao</a> Images: <a href="http://unsplash.com">Unsplash</a>
+        </div>
+    </div>
+</body>
+</html>
