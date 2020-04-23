@@ -46,6 +46,7 @@ function setPracticeLength(length){
 }
 
 function setCurrentLesson(lesson){
+    console.log(lesson.value);
     currentLesson = lesson.value;
 }
 
@@ -76,7 +77,8 @@ function addLessonButtons(){
 	    runTutorialA();
 	}
 	else{
-	    document.getElementById("buttonContainer").insertAdjacentHTML("afterend", "</br><button type='button' class='btn btn-primary' style='margin:20px;text-align:center;' onclick='c2a(" + lessonOrder[currentLesson] + ")'>" + lessonOrder[currentLesson] + "</button>");
+	    document.getElementById("buttonContainer").insertAdjacentHTML("afterend", "</br><button type='button' class='btn btn-primary' style='margin:20px;text-align:center;' onclick='c2a(" +" \"" + lessonOrder[currentLesson] +"\"" +  ")'>" + lessonOrder[currentLesson] + "</button>");
+	    runTutorialA();
 	}
     }
 }
