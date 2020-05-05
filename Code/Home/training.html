@@ -39,7 +39,6 @@
 	    <li><a href="tutorial.html">Tutorial</a></li>
 	    <li class="active"><a href="#">Training</a></li>
 	    <li><a href="translator.html">Translator</a></li>
-	    <li><a href="chatroom.html">Chatroom</a></li>
 	    <li><a href="account.html">Account</a></li>
 	  </ul>
 	</nav>
@@ -49,7 +48,7 @@
 	<!-- Logo -->
 	<div id="logo" style='height:20px'>
 	  <h1><a href="#">Training</a></h1>
-	  <span class="tag"></span>
+	  <span class="tag">Best way to study</span>
 	</div>
       </div>
     </div>
@@ -57,12 +56,11 @@
     <!-- Main -->
 
     <div id="main">
-      <div id="content" class="container-fluid">
-      	<div id='train-start' class='container' style='width:900px;outline:2px solid'>
+      <div id="content" class="container">
+      	<div id='train-start' class='container' style='width:900px;height:300px;outline:2px solid'>
       	  <header id='train-start-header'>
-      	    <h3 id='train-title' style='font-size:20pt'>Are you ready to start your training?</h3>
-      	    <p>Select lesson and session length (in number of characters).</p>
-  	         <table>
+      	    <h2 id='train-title' style='font-size:35pt'>Are you ready to start your training?</h2>
+      	    <h1 id='train-title-2' style='font-size:15pt'>Select lesson and session length (in number of characters).</h1>
   	            <tbody><tr>
       		          <td width="2%">&nbsp;</td>
       		            <td>Change to lesson:</td>
@@ -111,12 +109,12 @@
                 		      <option>1</option><option selected="">2</option><option>3</option><option>4</option><option>5</option></select>
                   		  </td>
                 		</tr>
-          	    </tbody></table>
+          	    </tbody>
         	  </header>
     	  <div id='train-target'>
     	    <div class='container' style='width:450px;text-align:center' id="buttonContainer">
     	      <!--In my head I'm thinking we use the account info to pass in the current lesson to addLessonButtons.-->
-    	      <button id='button-begin' style='margin-bottom:10px' type='button' class='btn btn-primary' onclick='beginLesson()'>Begin lesson!</button>
+    	      <button id='button-begin' style='margin-bottom:10px' type='button' class='btn btn-info' onclick='beginLesson()'>Begin lesson!</button>
     	    </div>
     	  </div>
     	</div>
